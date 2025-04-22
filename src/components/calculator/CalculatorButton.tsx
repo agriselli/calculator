@@ -17,12 +17,12 @@ const CalculatorButton: React.FC<CalculatorButtonProps> = ({
   colSpan = 1,
   rowSpan = 1,
 }) => {
-  // const spanClass = `
-  //   ${colSpan === 2 ? "col-span-2" : `col-span-${colSpan}`}
-  //   ${rowSpan === 2 ? "row-span-2" : `row-span-${rowSpan}`}
-  // `;
+  const spanClass = `
+    ${colSpan === 3 ? "col-span-3" : colSpan === 2 ? "col-span-2" : "col-span-1"}
+    ${rowSpan === 2 ? "col-span-2" : "row-span-1"}
+  `;
 
-  const spanClass = `col-span-${colSpan} row-span-${rowSpan}`;
+  // const spanClass = `col-span-${colSpan} row-span-${rowSpan}`;
 
   return (
     <button

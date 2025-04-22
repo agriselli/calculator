@@ -62,3 +62,5 @@ This project is licensed under the [Insert License Name] License. See the `LICEN
 
 ## Contact
 For any questions or feedback, please contact [your email or GitHub profile link].
+
+Dummy commit to test git-actions

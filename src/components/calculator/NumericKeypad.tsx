@@ -29,7 +29,6 @@ const NumericKeypad: React.FC<NumericKeypadProps> = ({
       <CalculatorButton
         onClick={onClearClick}
         className={clearButtonClass}
-       // colSpan={isScientific ? 3 : 1}
         colSpan={3}
       >
         AC

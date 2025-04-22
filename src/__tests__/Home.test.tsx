@@ -1,12 +1,16 @@
 import { render, screen } from '@testing-library/react';
 import Home from '../app/page';
+import '@testing-library/jest-dom';
 
 describe('Calculator App', () => {
   it('renders the calculator title', () => {
     render(<Home />);
 
-    // Check if the page contains the calculator title
-    const title = screen.getByText(/Simple Calculator/i);
+    // Check if the page contains the calculator title as h1 element
+    const title = screen.getByRole('heading', { 
+      name: /Simple Calculator/i,
+      level: 1
+    });
 
     expect(title).toBeInTheDocument();
   });
@@ -35,7 +39,7 @@ describe('Calculator App', () => {
     render(<Home />);
 
     // The initial display value should be "0"
-    const display = screen.getByText('0');
+    const display = screen.getByRole('button', { name: '0' });
 
     expect(display).toBeInTheDocument();
   });
@@ -45,7 +49,7 @@ describe('Calculator App', () => {
 
     // Check if the page contains numeric buttons
     for (let i = 0; i <= 9; i++) {
-      const button = screen.getByText(i.toString());
+      const button =  screen.getByRole('button', { name: `${i}` });
       expect(button).toBeInTheDocument();
     }
 

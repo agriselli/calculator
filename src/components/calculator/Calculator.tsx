@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useCalculator } from "./useCalculator";
+import { useCalculator } from "../../hooks/useCalculator";
 import Header from "./Header";
 import ModeToggle from "./ModeToggle";
 import CalculatorDisplay from "./CalculatorDisplay";

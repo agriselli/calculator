@@ -15,6 +15,9 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Simple Calculator",
   description: "A simple calculator web application",
+  other: {
+    "google-site-verification" : "xVIHxr-LCejH5iQDoRbi87zsHKBEp98cVeDPVUB0un8",
+  }
 };
 
 export default function RootLayout({
